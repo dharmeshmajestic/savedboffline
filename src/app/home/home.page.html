@@ -1,0 +1,30 @@
+<!-- home.page.html -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Insert Data
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Item Name</ion-label>
+    <ion-input [(ngModel)]="newItemName" name="newItemName" required></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="insertData()">Insert Data</ion-button>
+
+  <!-- Display the existing data -->
+  <ion-list *ngIf="data.length > 0">
+    <ion-item *ngFor="let item of data">
+      {{ item.name }}
+    </ion-item>
+  </ion-list>
+
+  <!-- Show a message if no data is available -->
+  <ion-text *ngIf="data.length === 0">
+    No data available.
+  </ion-text>
+</ion-content>

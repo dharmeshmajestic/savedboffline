@@ -1,0 +1,7 @@
+{
+  "name": "savedboff",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
